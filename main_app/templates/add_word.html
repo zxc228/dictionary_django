@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Add word{% endblock %}
+{% block content %}
+
+    <h1>Add words</h1>
+    <p>Here you can add words to your dictionary:</p>
+    <form action="{% url 'add_word' %}" method="post">
+        {% csrf_token %}
+        <label for="word1">word1:</label>
+        <input type="text" id="word1" name="word1">
+        <label for="word2">word2:</label>
+        <input type="text" id="word2" name="word2">
+        <input type="submit" value="Add">
+    </form>
+
+{% endblock %}

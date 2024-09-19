@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'add_word' %}">Add Word</a>
+            <a href="{% url 'words_list' %}">Word List</a>
+        </nav>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>

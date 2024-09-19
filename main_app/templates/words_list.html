@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Words list{% endblock %}
+
+{% block content %}
+
+<h1>Words list</h1>
+<p>Here is a list of words:</p>
+<table class="words_list">
+    <tr>
+        <th>Word</th>
+        <th>Translation</th>
+    </tr>
+    {% for word, translation in words %}
+        <tr>
+            <td>{{ word }}</td>
+            <td>{{ translation }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
